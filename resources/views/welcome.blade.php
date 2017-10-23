@@ -126,6 +126,7 @@
         <div class="container">
             <a href="#company"><div class="chevron-down block-shadow">&nbsp;</div></a>
             <h2>{{ $keys['ProductTitle'] }}</h2>
+            <br />
             @foreach($products AS $product)
                 <div class="products">
                     <div class="img"><img src="{{ $product['image_thumb'] }}" class="img-circle" /></div>
