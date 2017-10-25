@@ -49,50 +49,50 @@
             <a href="#tehnlogy"><div class="chevron-down block-shadow">&nbsp;</div></a>
             <h1>{{ $keys['H1'] }}</h1>
             <p class="description">
-                {{ $keys['CompanyDescription'] }}
+                {!! $keys['CompanyDescription'] !!}
             </p>
-            <div class="row">
-                <div class="col-sm-6 col-xs-12">
-                    <div class="description">
-                        <div id="map" style="width: 100%; height: 400px;"></div>
-                    </div>
-                    <script type="text/javascript">
-                        ymaps.ready(init);
-                        var myMap, myPlacemark;
-
-                        function init(){
-                            myMap = new ymaps.Map("map", {
-                                center: [{{ $keys['MapLatitude'] }}, {{ $keys['MapLongitude'] }}],
-                                zoom: 16
-                            });
-
-                            myPlacemark = new ymaps.Placemark(
-                                    [{{ $keys['MapLatitude'] }}, {{ $keys['MapLongitude'] }}],
-                                    {
-                                        hintContent: '{{ $keys['MapTitle'] }}',
-                                        balloonContent: '{{ $keys['MapDescription'] }}'
-                                    });
-                            // Создаем метку.
-                            var placemark = new ymaps.Placemark(
-                                    [{{ $keys['MapLatitude'] }}, {{ $keys['MapLongitude'] }}],
-                            {
-                                balloonContent: "{{ $keys['MapDescription'] }}",
-                                iconContent: "{{ $keys['MapTitle'] }}"
-                            }, {
-                                preset: "twirl#yellowStretchyIcon",
-                                // Отключаем кнопку закрытия балуна.
-                                balloonCloseButton: false,
-                                // Балун будем открывать и закрывать кликом по иконке метки.
-                                hideIconOnBalloonOpen: true
-                            });
-                            myMap.geoObjects.add(myPlacemark);
-                        }
-                    </script>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <div class="description">
+                    <div id="map" style="width: 100%; height: 400px;"></div>
                 </div>
-                <div class="col-sm-6 col-xs-12">
-                    <div class="description">
-                        <h3>{{ $keys['ContactTitle'] }}</h3>
-                        {{ $keys['ContactDescription'] }}
+                <script type="text/javascript">
+                    ymaps.ready(init);
+                    var myMap, myPlacemark;
+
+                    function init(){
+                        myMap = new ymaps.Map("map", {
+                            center: [{{ $keys['MapLatitude'] }}, {{ $keys['MapLongitude'] }}],
+                            zoom: 16
+                        });
+
+                        myPlacemark = new ymaps.Placemark(
+                                [{{ $keys['MapLatitude'] }}, {{ $keys['MapLongitude'] }}],
+                                {
+                                    hintContent: '{{ $keys['MapTitle'] }}',
+                                    balloonContent: '{{ $keys['MapDescription'] }}'
+                                });
+                        // Создаем метку.
+                        var placemark = new ymaps.Placemark(
+                                [{{ $keys['MapLatitude'] }}, {{ $keys['MapLongitude'] }}],
+                        {
+                            balloonContent: "{{ $keys['MapDescription'] }}",
+                            iconContent: "{{ $keys['MapTitle'] }}"
+                        }, {
+                            preset: "twirl#yellowStretchyIcon",
+                            // Отключаем кнопку закрытия балуна.
+                            balloonCloseButton: false,
+                            // Балун будем открывать и закрывать кликом по иконке метки.
+                            hideIconOnBalloonOpen: true
+                        });
+                        myMap.geoObjects.add(myPlacemark);
+                    }
+                </script>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="description">
+                    <h3>{{ $keys['ContactTitle'] }}</h3>
+                    {!! $keys['ContactDescription'] !!}
                     </div>
                 </div>
             </div>
@@ -113,11 +113,11 @@
         <div class="container">
             <a href="#product"><div class="chevron-down block-shadow">&nbsp;</div></a>
             <h2>{{ $keys['TehnlogyTitle'] }}</h2>
-            <p>{{ $keys['TehnlogyDescription'] }}</p>
+            <p>{!! $keys['TehnlogyDescription'] !!}</p>
             @foreach($technologies AS $technology)
                 <div class="technologies">
-                    <div class="title">{!! $technology['title'] !!}</div>
-                    <div class="description">{{ $technology['description'] }}</div>
+                    <div class="title">{{ $technology['title'] }}</div>
+                    <div class="description">{!! $technology['description'] !!}</div>
                 </div>
             @endforeach
         </div>
@@ -130,7 +130,7 @@
             @foreach($products AS $product)
                 <div class="products">
                     <div class="img"><img src="{{ $product['image_thumb'] }}" class="img-circle" /></div>
-                    <div class="description">{{ $product['description'] }}</div>
+                    <div class="description">{!! $product['description'] !!}</div>
                 </div>
             @endforeach
             <br /><br />
