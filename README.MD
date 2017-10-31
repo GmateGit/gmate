@@ -1,18 +1,18 @@
-#Сайт Gmate
+# Сайт Gmate
 
-##Установка
+## Установка
 
-###Composer:
+### Composer:
 >composer update
 
-###Bower:
+### Bower:
 >bower update
 
-###Storage: 
+### Storage: 
 
 >php artisan storage:link
 
-###Gulp: 
+### Gulp: 
 
 >npm install gulp
 
