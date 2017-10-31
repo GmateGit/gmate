@@ -26,9 +26,9 @@
     <div class="form-group">
         <label for="keyValue" class="col-sm-3 control-label">Значние</label>
         <div class="col-sm-9">
-            <textarea class="form-control" id="keyValue" name="key_value"
+            <text-angular id="keyValue" name="key_value" ta-default-wrap="span"
                       ng-model="landing.key_value" ng-required="true"
-                ></textarea>
+                ></text-angular>
             <span class="help-inline"
                   ng-show="landingForm.keyValue.$invalid && landingForm.keyValue.$touched">Обязательное поле</span>
         </div>

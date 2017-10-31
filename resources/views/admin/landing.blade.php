@@ -27,7 +27,7 @@
                 <td><% landingData.id %></td>
                 <td><% landingData['key_name'] %></td>
                 <td><% landingData.description %></td>
-                <td><% landingData['key_value'] %></td>
+                <td ng-bind-html="landingData.key_value"></td>
                 <td>
                     <button class="btn btn-default btn-xs btn-detail" ng-click="toggle('edit', landingData.id)">
                         <i class="fa fa-pencil" aria-hidden="true"></i>

@@ -1,5 +1,5 @@
-app.controller('landingController', ['$scope', 'dev4UService', '$http', 'API_URL', '$timeout',
-    function($scope, dev4UService, $http, API_URL, $timeout) {
+app.controller('landingController', ['$scope', 'dev4UService', '$http', 'API_URL', '$timeout', 'textAngularManager',
+    function($scope, dev4UService, $http, API_URL, $timeout, textAngularManager) {
 
         //retrieve employees listing from API
         $scope.updateList = function () {

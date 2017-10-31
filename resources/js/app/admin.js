@@ -1,11 +1,23 @@
-var app = angular.module('dev4UManagement', ['ngPassword', 'ngFileUpload'],
+var app = angular.module('dev4UManagement', ['ngPassword', 'ngFileUpload', 'textAngular'],
                 // по дефолту ангуляр конфликтует с blade, из-за общих тегов {{ }}
                 // меняем теги на <% и %>
                 function($interpolateProvider) {
                     $interpolateProvider.startSymbol('<%');
                     $interpolateProvider.endSymbol('%>');
                 })
-                .constant('API_URL', '/admin/');
+                .constant('API_URL', '/admin/')
+                .config(function($provide) {
+                    $provide.decorator('taOptions', ['taRegisterTool', '$delegate', function(taRegisterTool, taOptions) {
+                        taOptions.toolbar = [
+                            ['h1', 'h2', 'h3', 'h4', 'p', 'quote', 'html'],
+                            ['bold', 'italics', 'underline', 'strikeThrough', 'ul', 'ol', 'redo', 'undo', 'clear'],
+                            ['justifyLeft', 'justifyCenter', 'justifyRight', 'indent', 'outdent'],
+
+                        ];
+
+                        return taOptions;
+                    }]);
+                });
 
 app.factory('dev4UService', function($http, API_URL) {
     return {

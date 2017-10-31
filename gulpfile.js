@@ -18,6 +18,7 @@ elixir(function(mix) {
     mix.styles([
         'bower_components/bootstrap/dist/css/bootstrap.css',
         'bower_components/fontawesome/css/font-awesome.css',
+        'bower_components/textAngular/dist/textAngular.css',
         'resources/css/sb-admin-2.css',
         'resources/css/timeline.css'
     ], 'public/assets/stylesheets/management.css', './');
@@ -44,6 +45,9 @@ elixir(function(mix) {
         'bower_components/ng-file-upload/ng-file-upload.min.js',
         // 'bower_components/Chart.js/Chart.js',
         'bower_components/metisMenu/dist/metisMenu.js',
+        'bower_components/textAngular/dist/textAngular-rangy.min.js',
+        'bower_components/textAngular/dist/textAngular-sanitize.min.js',
+        'bower_components/textAngular/dist/textAngular.min.js',
         'resources/js/sb-admin-2.js',
         'resources/js/app/admin.js',
         'resources/js/app/controllers/*.js'
