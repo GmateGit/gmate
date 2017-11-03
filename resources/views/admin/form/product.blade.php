@@ -6,11 +6,11 @@
         <div class="col-sm-9">
             <div ngf-select="upload($file)" class="btn btn-success">
                 Загрузить</div>
-            <img ngf-thumbnail="image_thumb || '/images/thumb.png'" width="100">
+            <img ngf-thumbnail="product.image_thumb || '/images/thumb.png'" width="100">
         </div>
         <input type="hidden" name="image" value="<% image %>" ng-model="product.image"
                ng-required="true" ng-value="product.image" />
-        <input type="hidden" name="title" value="<% image_thumb %>" ng-model="product.image_thumb"
+        <input type="hidden" name="image_thumb" value="<% image_thumb %>" ng-model="product.image_thumb"
                ng-required="true" ng-value="product.image_thumb" />
     </div>
 

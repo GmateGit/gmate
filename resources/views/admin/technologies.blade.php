@@ -11,7 +11,6 @@
             <tr>
                 <th>ID</th>
                 <th>Заголовок</th>
-                <th>Описание</th>
                 <th>
                     <button id="btn-add" class="btn btn-primary btn-xs"
                             ng-click="toggle('add', 0)">
@@ -25,7 +24,6 @@
             <tr ng-repeat="technology in technologies">
                 <td><% technology.id %></td>
                 <td><% technology.title %></td>
-                <td><% technology.description %></td>
                 <td>
                     <button class="btn btn-default btn-xs btn-detail" ng-click="toggle('edit', technology.id)">
                         <i class="fa fa-pencil" aria-hidden="true"></i>

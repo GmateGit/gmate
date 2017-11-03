@@ -1,7 +1,7 @@
 @extends ('layouts.app')
 
 @section('title')
-    {{ $keys['MetaPageTitle'] }}
+    {{ strip_tags($keys['MetaPageTitle']) }}
 @endsection
 
 @section('head')
@@ -114,12 +114,16 @@
             <a href="#product"><div class="chevron-down block-shadow">&nbsp;</div></a>
             <h2>{{ $keys['TehnlogyTitle'] }}</h2>
             <p>{!! $keys['TehnlogyDescription'] !!}</p>
-            @foreach($technologies AS $technology)
-                <div class="technologies">
-                    <div class="title">{{ $technology['title'] }}</div>
-                    <div class="description">{!! $technology['description'] !!}</div>
+            <div class="technologies">
+                <div class="technologies_wrapper">
+                @foreach($technologies AS $technology)
+                    <div class="technology_item">
+                        <div class="image"><img src="{{ $technology['image'] }}" /></div>
+                        <div class="title">{!! $technology['title'] !!}</div>
+                    </div>
+                @endforeach
                 </div>
-            @endforeach
+            </div>
         </div>
     </div>
     <div class="block-panel dark-gray" id="product">

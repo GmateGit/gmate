@@ -38,7 +38,7 @@ app.controller('productController', ['$scope', 'dev4UService', '$http', 'API_URL
             }
             Upload.upload({
                 url: API_URL + "upload",
-                data: { file: file }
+                data: { file: file, entity: 'product' }
             }).then(function (resp) {
                 console.log(resp.data);
                 imageData = resp.data;

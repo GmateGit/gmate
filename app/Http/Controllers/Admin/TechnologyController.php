@@ -66,7 +66,8 @@ class TechnologyController extends Controller
         }
 
         $technology->title = $request->input('title');
-        $technology->description = $request->input('description');
+        $technology->image = $request->input('image');
+//        $technology->description = $request->input('description');
         $technology->updated_at = new \DateTime();
 
         $technology->save();

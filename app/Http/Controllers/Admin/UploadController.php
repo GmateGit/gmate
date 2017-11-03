@@ -33,9 +33,16 @@ class UploadController extends Controller
         $storageDir = storage_path() . self::UPLOAD_DIR . $newDir;
         $file->move($storageDir, $file->getClientOriginalName());
         // resizing an uploaded file
-        Image::make($storageDir . $file->getClientOriginalName())
-            ->resize(100, 100)
-            ->save($storageDir . 'thumb_' . $file->getClientOriginalName());
+        $image = Image::make($storageDir . $file->getClientOriginalName());
+        switch ($request->file('entity')) {
+            case 'product' : $image->resize(100, 100);
+                break;
+            case 'technology' : $image->resize(100, 100);
+                break;
+            default : $image->resize(100, 100);
+                break;
+        }
+        $image->save($storageDir . 'thumb_' . $file->getClientOriginalName());
 
         return response()->json([
             'image' => self::PUBLIC_DIR . $newDir . $file->getClientOriginalName(),

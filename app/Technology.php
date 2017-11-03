@@ -15,7 +15,7 @@ class Technology extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'description'
+        'title', 'image'
     ];
 
     /**
@@ -24,6 +24,6 @@ class Technology extends Model
      * @var array
      */
     protected $hidden = [
-        'created_at', 'updated_at',
+        'description', 'created_at', 'updated_at',
     ];
 }
