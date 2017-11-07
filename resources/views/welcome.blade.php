@@ -46,7 +46,7 @@
     </div>
     <div class="block-panel white" id="company">
         <div class="container">
-            <a href="#tehnlogy"><div class="chevron-down block-shadow">&nbsp;</div></a>
+            {{--<a href="#tehnlogy"><div class="chevron-down block-shadow">&nbsp;</div></a>--}}
             <h1>{{ $keys['H1'] }}</h1>
             <div class="description">
                 {!! $keys['CompanyDescription'] !!}
