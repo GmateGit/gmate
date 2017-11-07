@@ -48,9 +48,10 @@
         <div class="container">
             <a href="#tehnlogy"><div class="chevron-down block-shadow">&nbsp;</div></a>
             <h1>{{ $keys['H1'] }}</h1>
-            <p class="description">
+            <div class="description">
                 {!! $keys['CompanyDescription'] !!}
-            </p>
+            </div>
+            <br />
         <div class="row">
             <div class="col-sm-6 col-xs-12">
                 <div class="description">
@@ -113,7 +114,8 @@
         <div class="container">
             <a href="#product"><div class="chevron-down block-shadow">&nbsp;</div></a>
             <h2>{{ $keys['TehnlogyTitle'] }}</h2>
-            <p>{!! $keys['TehnlogyDescription'] !!}</p>
+            <div>{!! $keys['TehnlogyDescription'] !!}</div>
+            <br />
             <div class="technologies">
                 <div class="technologies_wrapper">
                 @foreach($technologies AS $technology)
