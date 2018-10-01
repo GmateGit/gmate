@@ -11,7 +11,7 @@
 @section('body')
     <header>
         <div class="container">
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
         </div>
     </header>
     <div class="slider">
